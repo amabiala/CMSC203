@@ -1,0 +1,92 @@
+<Project>
+  <Name>Untitled</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>Untitled</Name>
+    <Language>Java</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>Property</Name>
+        <Access>Public</Access>
+        <Location left="92" top="65" />
+        <Size width="597" height="449" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private String propertyName</Member>
+        <Member type="Field">private String city</Member>
+        <Member type="Field">private double rentAmount</Member>
+        <Member type="Field">private String owner</Member>
+        <Member type="Field">private Plot plot</Member>
+        <Member type="Constructor">public Property()</Member>
+        <Member type="Constructor">public Property(Property p)</Member>
+        <Member type="Constructor">public Property(String propertyName, String city, double rentAmount, String owner)</Member>
+        <Member type="Constructor">public Property(String propertyName, String city, double rentAmount, String owner, int x, int y, int width, int depth)</Member>
+        <Member type="Method">public void setPropertyName(String PropertyName)</Member>
+        <Member type="Method">public String getPropertyName()</Member>
+        <Member type="Method">public void setCity(String city)</Member>
+        <Member type="Method">public String getCity()</Member>
+        <Member type="Method">public void setRentAmount(double rentAmount)</Member>
+        <Member type="Method">public double getRentAmount()</Member>
+        <Member type="Method">public void setOwner(String owner)</Member>
+        <Member type="Method">public String getOwner()</Member>
+        <Member type="Method">public Plot setPlot(int x, int y, int width, int depth)</Member>
+        <Member type="Method">public String toString()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Plot</Name>
+        <Access>Public</Access>
+        <Location left="1217" top="51" />
+        <Size width="487" height="454" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private int x</Member>
+        <Member type="Field">private int y</Member>
+        <Member type="Field">private int width</Member>
+        <Member type="Field">private int depth</Member>
+        <Member type="Constructor">public Plot()</Member>
+        <Member type="Constructor">public Plot(Plot p)</Member>
+        <Member type="Constructor">public Plot(int x, int y, int width, int depth)</Member>
+        <Member type="Method">public boolean overlaps(Plot p)</Member>
+        <Member type="Method">public boolean encompasses(Plot p)</Member>
+        <Member type="Method">public void setX(int x)</Member>
+        <Member type="Method">public int getX()</Member>
+        <Member type="Method">public void setY(int y)</Member>
+        <Member type="Method">public int getY()</Member>
+        <Member type="Method">public void setWidth(int width)</Member>
+        <Member type="Method">public int getWidth()</Member>
+        <Member type="Method">public void setDepth(int depth)</Member>
+        <Member type="Method">public int getDepth()</Member>
+        <Member type="Method">public String toString()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ManagementCompany</Name>
+        <Access>Public</Access>
+        <Location left="625" top="562" />
+        <Size width="651" height="434" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private String name</Member>
+        <Member type="Field">private String taxID</Member>
+        <Member type="Field">private Property[] properties</Member>
+        <Member type="Field">private double mgmFeePer</Member>
+        <Member type="Field">private final int MAX_PROPERTY</Member>
+        <Member type="Field">private final int MGMT_WIDTH</Member>
+        <Member type="Field">private int MGMT_DEPTH</Member>
+        <Member type="Field">private Plot plot</Member>
+        <Member type="Constructor">public ManagementCompany()</Member>
+        <Member type="Constructor">public ManagementCompany(String name, String taxID, double mgmFee)</Member>
+        <Member type="Constructor">public ManagementCompany(String name, String taxID, double mgmFee, int x, int y, int width, int depth)</Member>
+        <Member type="Constructor">public ManagementCompany(ManagementCompany otherCompany)</Member>
+        <Member type="Method">public int getMAX_PROPERTY()</Member>
+        <Member type="Method">public int addProperty(Property property)</Member>
+        <Member type="Method">public int addProperty(String propertyName, String city, double rentAmount, String owner)</Member>
+        <Member type="Method">public int addProperty(String propertyName, String city, double rentAmount, String owner, int x, int y, int width, int depth)</Member>
+        <Member type="Method">public double totalRent()</Member>
+        <Member type="Method">public String maxRentProp()</Member>
+        <Member type="Method">public int maxPropertyRentIndex()</Member>
+        <Member type="Method">public String displayPropertyAtIndex(int i)</Member>
+        <Member type="Method">public String toString()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships />
+  </ProjectItem>
+</Project>
