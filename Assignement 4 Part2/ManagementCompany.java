@@ -119,7 +119,7 @@ public class ManagementCompany {
 				maxRent=properties[i].getRentAmount();
 			}
 			if(maxRent<=properties[i].getRentAmount()) {
-				output+=properties[i].toString();
+				output=properties[i].toString();
 			}
 		}
 		return output;
