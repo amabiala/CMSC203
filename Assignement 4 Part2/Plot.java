@@ -25,29 +25,29 @@ public class Plot {
 
 	public boolean overlaps(Plot plot)
 	{
-		boolean doesOverlap = false;
+		boolean overlap = false;
 		
 		if((plot.y < y + depth) && (plot.y + plot.depth > y) && (plot.x < x + width) && (plot.x + plot.width > x))
 		{
-			doesOverlap = true;
+			overlap = true;
 		}
 		
-		return doesOverlap;
+		return overlap;
 	}
 
 	public boolean encompasses(Plot plot) 
 	{
-		boolean Encompass = false;
+		boolean encompass = false;
 		if ((plot.x + plot.width <= x + width) && (plot.y + plot.depth <= y + depth) && (plot.x >= x) && (plot.y >= y))
 		{
-			Encompass = true;
+			encompass = true;
 		}
 		else
 		{
-			Encompass = false;
+			encompass = false;
 		}
 		
-		return Encompass;
+		return encompass;
 	}
 
 	public void setX(int x) {
