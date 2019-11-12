@@ -65,13 +65,13 @@ public class ManagementCompany {
 		
 		
 		if(count>=MAX_PROPERTY) {
-			return -2;
+			return -1;
 		}
 		
 		
 		
 		if (property==null) {
-			return -1;
+			return -2;
 		}
 		
 		if (!(plot.encompasses(property.getPlot()))) {
