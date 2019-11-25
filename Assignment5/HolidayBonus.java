@@ -38,25 +38,10 @@ public class HolidayBonus {
 	 * @return an array of the bonus for each store
 	 */
 	public static double calculateTotalHolidayBonus(double[][]data, double highBonus, double lowBonus, double other) {
-		double[]bonus=new double [data.length];
 		double totalBonus=0;
-		for(int i=0;i<data.length;i++) {
-			for(int j=0;j<data[i].length;j++){
-				double lowest =TwoDimRaggedArrayUtility.getLowestInColumn(data, i);
-				double highest=TwoDimRaggedArrayUtility.getHighestInColumn(data, i);
-				if(data[j][i]!=lowest && data[j][i]!=highest) {
-					data[j][i]=other;
-				}
-				else if(data[j][i]==lowest) {
-					data[j][i]=lowBonus;
-				}
-				else {
-					data[j][i]=highBonus;
-				}
-				bonus[i]=data[i][j];
-				totalBonus+=bonus[i];
-			}
-			
+		double[]ar=HolidayBonus.calculateHolidayBonus(data, highBonus, lowBonus, other);
+		for(int j=0;j<ar.length;j++) {
+			totalBonus+=ar[j];
 		}
 		return totalBonus;
 	}
