@@ -8,22 +8,22 @@ public class HolidayBonus {
 	 * @param other bonus for all other stores in a category
 	 * @return an array of the bonus for each store
 	 */
-	public double[] CalculateHolidayBonus(double[][]data, double highBonus, double lowBonus, double other){
+	public static double[] calculateHolidayBonus(double[][]data, double highBonus, double lowBonus, double other){
 		double[]bonus=new double [data.length];
-		for(int i=0;i<data.length;i++) {
-			for(int j=0;j<data[i].length;j++){
+		for(int j=0;j<data.length;j++) {
+			for(int i=0;i<data[j].length;i++){
 				double lowest =TwoDimRaggedArrayUtility.getLowestInColumn(data, i);
 				double highest=TwoDimRaggedArrayUtility.getHighestInColumn(data, i);
 				if(data[j][i]!=lowest && data[j][i]!=highest) {
-					data[j][i]=other;
+					bonus[j]+=other;
 				}
 				else if(data[j][i]==lowest) {
-					data[j][i]=lowBonus;
+					bonus[j]+=lowBonus;
 				}
 				else {
-					data[j][i]=highBonus;
+					bonus[j]+=highBonus;
 				}
-				bonus[i]=data[i][j];
+				//bonus[i]=data[j][i];
 			}
 			
 		}
@@ -37,7 +37,7 @@ public class HolidayBonus {
 	 * @param other bonus for all other stores in a category
 	 * @return an array of the bonus for each store
 	 */
-	public double calculateTotalHolidayBonus(double[][]data, double highBonus, double lowBonus, double other) {
+	public static double calculateTotalHolidayBonus(double[][]data, double highBonus, double lowBonus, double other) {
 		double[]bonus=new double [data.length];
 		double totalBonus=0;
 		for(int i=0;i<data.length;i++) {
