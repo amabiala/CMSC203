@@ -5,7 +5,11 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
-
+/**
+ * 
+ * @author stephanie
+ *
+ */
 public class TwoDimRaggedArrayUtility {
 	/**
 	 * Reads from a file and returns a ragged array
@@ -234,7 +238,7 @@ public class TwoDimRaggedArrayUtility {
 	 */
 	public static double getHighestInColumn(double[][] data, int col) {
 		double highest = 0.0;
-		int index = 0;
+		
 
 		for (int i = 0; i < data.length; i++) {
 			if (col>=data[i].length) {
