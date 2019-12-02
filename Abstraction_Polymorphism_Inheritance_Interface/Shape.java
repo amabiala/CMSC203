@@ -16,10 +16,33 @@ public abstract class Shape {
 		color = s.color;
 		name = s.name;
 	}
+	
+	public String getColor() {
+		return color;
+	}
+
+	public void setColor(String color) {
+		this.color = color;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
 	public abstract double calcArea();
 	
 	@Override
-	public abstract boolean equals(Object o) ;
+	public  boolean equals(Object o) {
+		if(o instanceof Shape) {
+			Shape temp=(Shape) o;
+			return (temp.color.equals(this.color)&&(temp.name.equals(this.name)));
+		}
+		return false;
+	}
 	
 	public String toString() {
 		return "Name: "+name+"\nColor: "+color;
