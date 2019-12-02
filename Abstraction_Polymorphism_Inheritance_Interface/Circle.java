@@ -26,17 +26,14 @@ public class Circle extends Shape implements ShapeOperation {
 	public String moveRight() {
 		return super.toString()+ "  moved right";
 	}
+	
 	@Override
 	public boolean equals(Object o) {
+		if(o instanceof Circle) {
 		Circle s=(Circle) o;
-		boolean equal=false;
-		if (name.equals(s.name) &&(color.equals(s.color))) {
-			equal=true;
+		return (super.equals(s) && s.radius==this.radius );
 		}
-		else {
-			equal=false;
-		}
-		return equal;
+		return false;
 	}
 	
 }
