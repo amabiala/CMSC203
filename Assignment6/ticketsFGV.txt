@@ -1,0 +1,6 @@
+Avengers Endgame:PG13:2:20:3D:Adult:0
+Spies in disguise:PG:2:16:3D:Child:0
+The mummy:NR:7:20:NONE:Employee:1234
+Maleficent:PG:3:14:3D:Employee:5678
+Aquaman:PG13:14:22:NONE:MoviePass:1356
+Thunderdogs:G:2:14:3D:MoviePass:2785
